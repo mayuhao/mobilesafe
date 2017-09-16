@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">mobilesafe</string>
+    <string name="version_name">版本名称</string>
+    <string name="title_activity_home">HomeActivity</string>
+</resources>
