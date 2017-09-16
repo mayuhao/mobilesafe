@@ -22,7 +22,7 @@ public class SplashActivity extends AppCompatActivity {
                     enterHome();
             }
 
-        };
+        }
     };
 
     @Override
@@ -66,6 +66,7 @@ public class SplashActivity extends AppCompatActivity {
         }.start();
     }
 
+    //进入主界面
     private void enterHome() {
         Intent intent = new Intent(this,HomeActivity.class);
         startActivity(intent);
