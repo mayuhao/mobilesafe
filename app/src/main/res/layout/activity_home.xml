@@ -1,9 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.airzj.mobilesafe.activity.HomeActivity">
+    tools:context="com.airzj.mobilesafe.activity.HomeActivity"
+    android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="功能列表"
+        android:gravity="center"
+        android:padding="15sp"
+        android:textSize="20sp"
+        android:background="@android:color/holo_green_dark"
+        />
+
+    <TextView
+        android:id="@+id/tv_paomadeng"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/paomadeng"
+        android:textColor="#000"
+        android:padding="5sp"
+        android:lines="1"
+
+
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:scrollHorizontally="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        />
+
+    <GridView
+        android:id="@+id/gv_home"
+        android:verticalSpacing="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="3"
+        />
+
+
+
+
+</LinearLayout>

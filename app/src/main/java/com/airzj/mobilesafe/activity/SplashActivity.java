@@ -3,8 +3,10 @@ package com.airzj.mobilesafe.activity;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.animation.AlphaAnimation;
 import android.widget.TextView;
 
 import com.airzj.mobilesafe.BuildConfig;
@@ -14,6 +16,7 @@ import com.airzj.mobilesafe.R;
 public class SplashActivity extends AppCompatActivity {
     private static final int ENTER_HOME = 100;
     private TextView tv_version_name;
+    private ConstraintLayout lo_root;
 
     private Handler mHandler = new Handler(){
         public void handleMessage(android.os.Message msg){
@@ -33,6 +36,17 @@ public class SplashActivity extends AppCompatActivity {
         initUI();
         //初始化数据
         initData();
+        //初始化动画
+        initAnimation();
+    }
+
+    /**
+     * 淡入淡出效果，但是没反应？
+     */
+    private void initAnimation() {
+        AlphaAnimation alphaAnimation = new AlphaAnimation(0,1);
+        alphaAnimation.setDuration(3000);
+        lo_root.startAnimation(alphaAnimation);
     }
 
     private void initData() {
@@ -88,6 +102,9 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     private void initUI() {
+
         tv_version_name = (TextView) findViewById(R.id.tv_version_name);
+
+        lo_root = (ConstraintLayout)findViewById(R.id.lo_root);
     }
 }
