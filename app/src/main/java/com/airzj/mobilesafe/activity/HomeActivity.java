@@ -1,5 +1,6 @@
 package com.airzj.mobilesafe.activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -54,6 +55,8 @@ public class HomeActivity extends AppCompatActivity {
                     case 0:
                         break;
                     case 8:
+                        Intent intent = new Intent(getApplicationContext(),SettingActivity.class);
+                        startActivity(intent);
                         break;
                     default:
 
